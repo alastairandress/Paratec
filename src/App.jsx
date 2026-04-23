@@ -589,45 +589,45 @@ function ApplyModal({ role, onClose }) {
 function LiveRoles() {
   const roles = [
     {
-  id: 'modelml-infra',
-  title: 'Infrastructure Engineer',
-  company: 'Model ML',
-  location: 'London, UK',
-  type: 'Full-time',
-  salary: '£120k - £170k + Equity',
-  skills: ['Terraform', 'Kubernetes', 'Azure'],
-  category: 'ml'
-},
-{
-  id: 'modelml-fullstack',
-  title: 'Full Stack Engineer',
-  company: 'Model ML',
-  location: 'London, UK',
-  type: 'Full-time',
-  salary: '£120k - £170k + Equity',
-  skills: ['React', 'Python', 'Azure'],
-  category: 'ml'
-},
-{
-  id: 'modelml-backend',
-  title: 'Senior Backend Engineer',
-  company: 'Model ML',
-  location: 'London, UK',
-  type: 'Full-time',
-  salary: '£140k - £175k + Equity',
-  skills: ['Python', 'PostgreSQL', 'Kafka'],
-  category: 'ml'
-},
-{
-  id: 'modelml-ai',
-  title: 'Full Stack AI Engineer',
-  company: 'Model ML',
-  location: 'London, UK',
-  type: 'Full-time',
-  salary: '£140k - £175k + Equity',
-  skills: ['React', 'Python', 'RAG'],
-  category: 'ml'
-},   
+      id: 'modelml-infra',
+      title: 'Infrastructure Engineer',
+      company: 'Model ML',
+      location: 'London, UK',
+      type: 'Full-time',
+      salary: '£120k - £170k + Equity',
+      skills: ['Terraform', 'Kubernetes', 'Azure'],
+      category: 'ml'
+    },
+    {
+      id: 'modelml-fullstack',
+      title: 'Full Stack Engineer',
+      company: 'Model ML',
+      location: 'London, UK',
+      type: 'Full-time',
+      salary: '£120k - £170k + Equity',
+      skills: ['React', 'Python', 'Azure'],
+      category: 'ml'
+    },
+    {
+      id: 'modelml-backend',
+      title: 'Senior Backend Engineer',
+      company: 'Model ML',
+      location: 'London, UK',
+      type: 'Full-time',
+      salary: '£140k - £175k + Equity',
+      skills: ['Python', 'PostgreSQL', 'Kafka'],
+      category: 'ml'
+    },
+    {
+      id: 'modelml-ai',
+      title: 'Full Stack AI Engineer',
+      company: 'Model ML',
+      location: 'London, UK',
+      type: 'Full-time',
+      salary: '£140k - £175k + Equity',
+      skills: ['React', 'Python', 'RAG'],
+      category: 'ml'
+    },
     {
       title: 'Senior Solidity Developer',
       company: 'DeFi Protocol',
