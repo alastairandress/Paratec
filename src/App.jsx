@@ -683,7 +683,24 @@ function LiveRoles() {
       sector: 'Quant',
     },
   ]
+  ]
 
+  return (
+    <section id="roles" className="py-20 px-8 bg-black">
+      <div className="max-w-7xl mx-auto">
+        <h2>Live Roles</h2>
+        {/* Render all the roles here */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {roles.map((role, index) => (
+            <div key={index} className="role-card">
+              {/* Role card JSX */}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
   const [filter, setFilter] = useState('All')
   const [applyRole, setApplyRole] = useState(null)
   const sectors = ['All', 'Web3', 'ML', 'Quant']
