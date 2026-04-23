@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import {
-  Menu, X, Mail, MapPin, ArrowRight, ArrowUpRight,
+  Menu, X, Mail, MapPin, ArrowRight,
   ChevronDown, Send, Briefcase, Brain, Paperclip,
   TrendingUp, Blocks, Clock, DollarSign, ExternalLink,
 } from 'lucide-react'
@@ -595,8 +595,8 @@ function LiveRoles() {
       location: 'London, UK',
       type: 'Full-time',
       salary: '£120k - £170k + Equity',
-      skills: ['Terraform', 'Kubernetes', 'Azure'],
-      category: 'ml'
+      tags: ['Terraform', 'Kubernetes', 'Azure'],
+      sector: 'ML',
     },
     {
       id: 'modelml-fullstack',
@@ -605,8 +605,8 @@ function LiveRoles() {
       location: 'London, UK',
       type: 'Full-time',
       salary: '£120k - £170k + Equity',
-      skills: ['React', 'Python', 'Azure'],
-      category: 'ml'
+      tags: ['React', 'Python', 'Azure'],
+      sector: 'ML',
     },
     {
       id: 'modelml-backend',
@@ -615,8 +615,8 @@ function LiveRoles() {
       location: 'London, UK',
       type: 'Full-time',
       salary: '£140k - £175k + Equity',
-      skills: ['Python', 'PostgreSQL', 'Kafka'],
-      category: 'ml'
+      tags: ['Python', 'PostgreSQL', 'Kafka'],
+      sector: 'ML',
     },
     {
       id: 'modelml-ai',
@@ -625,10 +625,11 @@ function LiveRoles() {
       location: 'London, UK',
       type: 'Full-time',
       salary: '£140k - £175k + Equity',
-      skills: ['React', 'Python', 'RAG'],
-      category: 'ml'
+      tags: ['React', 'Python', 'RAG'],
+      sector: 'ML',
     },
     {
+      id: 'defi-solidity',
       title: 'Senior Solidity Developer',
       company: 'DeFi Protocol',
       location: 'Remote',
@@ -638,6 +639,7 @@ function LiveRoles() {
       sector: 'Web3',
     },
     {
+      id: 'aistartup-llm',
       title: 'ML Engineer — LLMs',
       company: 'AI Startup',
       location: 'London, UK',
@@ -647,6 +649,7 @@ function LiveRoles() {
       sector: 'ML',
     },
     {
+      id: 'hedgefund-quant',
       title: 'Quantitative Researcher',
       company: 'Hedge Fund',
       location: 'London, UK',
@@ -656,6 +659,7 @@ function LiveRoles() {
       sector: 'Quant',
     },
     {
+      id: 'l2-architect',
       title: 'Blockchain Architect',
       company: 'Layer 2 Network',
       location: 'Remote (EU)',
@@ -665,6 +669,7 @@ function LiveRoles() {
       sector: 'Web3',
     },
     {
+      id: 'fintech-ds',
       title: 'Senior Data Scientist',
       company: 'FinTech Scale-up',
       location: 'London, UK',
@@ -674,6 +679,7 @@ function LiveRoles() {
       sector: 'ML',
     },
     {
+      id: 'proptrading-algo',
       title: 'Algorithmic Trading Developer',
       company: 'Proprietary Trading Firm',
       location: 'London, UK',
@@ -683,24 +689,7 @@ function LiveRoles() {
       sector: 'Quant',
     },
   ]
-  ]
 
-  return (
-    <section id="roles" className="py-20 px-8 bg-black">
-      <div className="max-w-7xl mx-auto">
-        <h2>Live Roles</h2>
-        {/* Render all the roles here */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {roles.map((role, index) => (
-            <div key={index} className="role-card">
-              {/* Role card JSX */}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
   const [filter, setFilter] = useState('All')
   const [applyRole, setApplyRole] = useState(null)
   const sectors = ['All', 'Web3', 'ML', 'Quant']
@@ -753,7 +742,7 @@ function LiveRoles() {
           <AnimatePresence mode="popLayout">
             {filtered.map((role) => (
               <motion.div
-                key={role.title}
+                key={role.id}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
